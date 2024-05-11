@@ -2,6 +2,7 @@
 import "@fontsource-variable/onest";
 
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
 interface Props {
   title: string;
@@ -22,31 +23,38 @@ const { description, title } = Astro.props;
     <title>{title}</title>
   </head>
 
-  <body class="relative text-black dark:text-white">
+  <body class="relative text-white">
     <div
-      class=""
+      class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"
     >
     </div>
     <Header />
     <slot />
-
-    <style is:global>
-      :root {
-        color-scheme: light dark;
-      }
-
-      html {
-        font-family: "Onest Variable", system-ui, sans-serif;
-        scroll-behavior: smooth;
-      }
-
-      body {
-        color: rgba(17, 17, 17, 0.9);
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        overscroll-behavior: none;
-      }
-    </style>
+    <Footer />
   </body>
 </html>
+
+<style is:global>
+  :root {
+    color-scheme: light dark;
+  }
+
+  html {
+    font-family: "Onest Variable", system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    color: rgba(17, 17, 17, 0.9);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overscroll-behavior: none;
+  }
+
+  @media(prefers-reduced-motion: reduce){
+    html{
+      scroll-behavior: auto;
+    }
+  }
+</style>
