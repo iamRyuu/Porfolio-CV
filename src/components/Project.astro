@@ -5,6 +5,9 @@ import Figma from "./icons/Figma.astro";
 import Tailwind from "./icons/Tailwind.astro";
 import Link from "./icons/Link.astro";
 import LinkButton from "./LinkButton.astro";
+import React from "./icons/React.astro";
+import Vite from "./icons/Vite.astro";
+import { toCodes } from "astro:i18n";
 
 const TAGS = {
   NEXT: {
@@ -22,6 +25,16 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Figma,
   },
+  REACT:{
+    name: "React",
+    class: "bg-[#003159] text-white",
+    icon: React,  
+  },
+  VITE: {
+    name: "Vite",
+    class: "bg-[#003159] text-white",
+    icon: Vite,
+  },
 };
 
 const PROJECTS = [
@@ -35,6 +48,15 @@ const PROJECTS = [
     tags: [TAGS.FIGMA],
   },
   {
+    title: "TicTacToe",
+    description:
+      "Clasico juego de mesa, que permite al jugador elegir un movimiento en cada casilla de la mesa. El objetivo del juego es ganar la partida ganando 3 veces en una fila, columna o diagonal.",
+    link: "https://tic-tac-toe-umber-gamma-94.vercel.app/",
+    github: "https://github.com/iamRyuu/TicTacToe",
+    image: "/projects/TicTacToe.webp",
+    tags: [TAGS.REACT, TAGS.VITE],
+  },
+  {
     title: "InnoCatarina",
     description:
       "Este proyecto es una propuesta de una página web que incentive al turismo y promocione la labor artesana desarrollada en el municio de San Juan de Oriente, perteneciente al departamento de Masaya. Con una breve visita al lugar por parte de la Unviersidad Nacional de Ingenería se logro recopilar la información necesaria para desarrollar esta propuesta.",
@@ -43,6 +65,7 @@ const PROJECTS = [
     image: "/projects/InnoCatarina.webp",
     tags: [TAGS.FIGMA],
   },
+  
 ];
 ---
 
