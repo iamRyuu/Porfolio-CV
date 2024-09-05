@@ -7,6 +7,7 @@ import Link from "./icons/Link.astro";
 import LinkButton from "./LinkButton.astro";
 import React from "./icons/React.astro";
 import Vite from "./icons/Vite.astro";
+import Typescript from "./icons/Typescript.astro";
 import { toCodes } from "astro:i18n";
 
 const TAGS = {
@@ -35,6 +36,11 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Vite,
   },
+  TYPESCRIPT: {
+    name: "Typescript",
+    class: "bg-[#003159] text-white",
+    icon: Typescript,
+  },
 };
 
 const PROJECTS = [
@@ -46,6 +52,15 @@ const PROJECTS = [
     github: "",
     image: "/projects/Brandify_Ss.webp",
     tags: [TAGS.FIGMA],
+  },
+  {
+    title: "Jokes-APP",
+    description:
+      "Jokes-app es una aplicación divertida y simpática que pretende arrancarte una sonrisa en cualquier momento del día. Con una amplia variedad de categorías de chistes, desde humor friki hasta chistes clásicos, Jokes-app te permite seleccionar tu categoría favorita y recibir un chiste al instante.",
+    link: "https://jokes-app-nu-rouge.vercel.app/",
+    github: "https://github.com/iamRyuu/jokes-app",
+    image: "/projects/jokes-app.webp",
+    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.TYPESCRIPT],
   },
   {
     title: "TicTacToe",
@@ -65,6 +80,7 @@ const PROJECTS = [
     image: "/projects/InnoCatarina.webp",
     tags: [TAGS.FIGMA],
   },
+  
   
 ];
 ---
